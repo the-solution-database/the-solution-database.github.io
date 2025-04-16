@@ -20,7 +20,7 @@
     ],
     "android": [
         { "id": "and-battery", "title": "Battery", "icon": "battery.svg" },
-        { "id": "app-patches", "title": "App Patching", "icon": "patch.svg" },
+        { "id": "app-patches", "title": "App Patching", "icon": "patch.svg" }
     ],
     "about": [
         { "id": "about-us", "title": "About This Project", "icon": "info.svg" },
