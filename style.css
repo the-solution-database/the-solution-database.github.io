@@ -1,13 +1,13 @@
 :root {
-    --primary-color: #6c5ce7;
-    --secondary-color: #2980b9;
-    --highlight-color: #a29bfe;
-    --background-light: rgba(245, 240, 255, 0.95); /* Lighter with purple undertone */
-    --text-light: #2d3436;
-    --shadow-light: rgba(0, 0, 0, 0.15);
-    --background-dark: rgba(15, 15, 25, 0.95); /* Darker, closer to black with purple undertone */
-    --text-dark: #f5f6fa;
-    --shadow-dark: rgba(0, 0, 0, 0.4);
+    --primary-color: #5d4ac9;
+    --secondary-color: #1a4b8c;
+    --highlight-color: #7d6bff;
+    --background-light: rgba(15, 15, 25, 0.95); /* Dark by default */
+    --text-light: #f5f6fa;
+    --shadow-light: rgba(0, 0, 0, 0.4);
+    --background-dark: rgba(245, 240, 255, 0.95); /* Light variant stored here */
+    --text-dark: #2d3436;
+    --shadow-dark: rgba(0, 0, 0, 0.15);
     --glass-border: rgba(255, 255, 255, 0.25);
     --transition-speed: 0.3s;
 }
@@ -23,11 +23,11 @@ body {
     min-height: 100vh;
 }
 
-
-body.dark-theme {
-    --primary-color: #5d4ac9;
-    --secondary-color: #1a4b8c;
-    --highlight-color: #7d6bff;
+/* Light theme override */
+body.light-theme {
+    --primary-color: #6c5ce7;
+    --secondary-color: #2980b9;
+    --highlight-color: #a29bfe;
     --background-light: var(--background-dark);
     --text-light: var(--text-dark);
     --shadow-light: var(--shadow-dark);
@@ -84,7 +84,7 @@ body.dark-theme {
 }
 
 .slider {
-    background-color: var(--background-dark);
+    background-color: var(--background-light);
     bottom: 0;
     cursor: pointer;
     left: 0;
@@ -107,7 +107,7 @@ body.dark-theme {
 }
 
 input:checked + .slider {
-    background-color: var(--background-light);
+    background-color: var(--background-dark);
 }
 
 input:checked + .slider:before {

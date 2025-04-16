@@ -1,22 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.querySelector('#checkbox');
 
-    // dark theme default
-    if (localStorage.getItem('theme') !== 'light') {
-        document.body.classList.add('dark-theme');
-        themeToggle.checked = false;
-    } else {
-        document.body.classList.remove('dark-theme');
+    if (localStorage.getItem('theme') === 'light') {
+        document.body.classList.add('light-theme');
         themeToggle.checked = true;
+    } else {
+        themeToggle.checked = false;
     }
 
-    // Handle theme toggle
     themeToggle.addEventListener('change', function () {
         if (this.checked) {
-            document.body.classList.remove('dark-theme');
+            document.body.classList.add('light-theme');
             localStorage.setItem('theme', 'light');
         } else {
-            document.body.classList.add('dark-theme');
+            document.body.classList.remove('light-theme');
             localStorage.setItem('theme', 'dark');
         }
     });

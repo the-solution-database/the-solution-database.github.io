@@ -1,31 +1,25 @@
 {
     "general": [
-        { "id": "wifi-issues", "title": "WiFi Connection Issues", "icon": "wifi.svg" },
+        { "id": "basic", "title": "Basic Solutions", "icon": "basic.svg" },
         { "id": "bluetooth-pairing", "title": "Bluetooth Pairing Problems", "icon": "bluetooth.svg" },
-        { "id": "backup-data", "title": "How to Backup Your Data", "icon": "backup.svg" },
-        { "id": "password-reset", "title": "Password Reset Guide", "icon": "password.svg" }
+        { "id": "password-reset", "title": "Password Security", "icon": "password.svg" }
     ],
     "windows": [
-        { "id": "windows-update", "title": "Windows Update Troubleshooting", "icon": "update.svg" },
-        { "id": "blue-screen", "title": "Fix Blue Screen Errors", "icon": "bsod.svg" },
-        { "id": "registry-edit", "title": "Registry Editing Guide", "icon": "registry.svg" }
+        { "id": "windows-update", "title": "WiFi", "icon": "wifi.svg" }
     ],
     "linux": [
-        { "id": "package-management", "title": "Package Management", "icon": "package.svg" },
-        { "id": "terminal-commands", "title": "Essential Terminal Commands", "icon": "terminal.svg" },
-        { "id": "permissions", "title": "File Permissions Guide", "icon": "permissions.svg" }
+        { "id": "package-management", "title": "Packages", "icon": "package.svg" },
+        { "id": "terminal-commands", "title": "Terminal Commands", "icon": "terminal.svg" }
     ],
     "macos": [
-        { "id": "mac-cleanup", "title": "MacOS Cleanup Guide", "icon": "cleanup.svg" },
         { "id": "time-machine", "title": "Time Machine Backup", "icon": "timemachine.svg" }
     ],
-    "iphone": [
-        { "id": "ios-battery", "title": "Improve Battery Life", "icon": "battery.svg" },
-        { "id": "icloud-backup", "title": "iCloud Backup Guide", "icon": "icloud.svg" }
+    "ios": [
+        { "id": "ios-battery", "title": "Battery", "icon": "battery.svg" },
+        { "id": "icloud-backup", "title": "iCloud Backups", "icon": "icloud.svg" }
     ],
     "android": [
-        { "id": "android-performance", "title": "Android Performance Tips", "icon": "performance.svg" },
-        { "id": "app-permissions", "title": "App Permissions Guide", "icon": "appperms.svg" }
+        { "id": "android-performance", "title": "Battery", "icon": "performance.svg" }
     ],
     "about": [
         { "id": "about-us", "title": "About This Project", "icon": "info.svg" },
