@@ -8,7 +8,8 @@
     ],
     "linux": [
         { "id": "package-management", "title": "Packages", "icon": "package.svg" },
-        { "id": "terminal-commands", "title": "Terminal Commands", "icon": "terminal.svg" }
+        { "id": "terminal-commands", "title": "Terminal Commands", "icon": "terminal.svg" },
+        { "id": "distros", "title": "Distributions", "icon": "distro.svg" }
     ],
     "macos": [
         { "id": "time-machine", "title": "Time Machine Backup", "icon": "timemachine.svg" }
@@ -18,7 +19,8 @@
         { "id": "icloud-backup", "title": "iCloud Backups", "icon": "icloud.svg" }
     ],
     "android": [
-        { "id": "and-battery", "title": "Battery", "icon": "battery.svg" }
+        { "id": "and-battery", "title": "Battery", "icon": "battery.svg" },
+        { "id": "app-patches", "title": "App Patching", "icon": "patch.svg" },
     ],
     "about": [
         { "id": "about-us", "title": "About This Project", "icon": "info.svg" },
