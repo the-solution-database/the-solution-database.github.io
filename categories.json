@@ -1,7 +1,7 @@
 {
     "general": [
         { "id": "basic", "title": "Basic Solutions", "icon": "basic.svg" },
-        { "id": "password-reset", "title": "Password Security", "icon": "password.svg" }
+        { "id": "password-security", "title": "Password Security", "icon": "password.svg" }
     ],
     "windows": [
         { "id": "windows-update", "title": "WiFi", "icon": "wifi.svg" }
