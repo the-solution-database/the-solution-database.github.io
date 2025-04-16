@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category - The Solution Database</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts/theme.js" defer></script>
+    <script src="scripts/category.js" defer></script>
+</head>
+<body>
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+        </label>
+    </div>
+
+    <div class="container">
+        <div class="top-bar">
+            <a href="index.html" class="back-button">← Back</a>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search solutions...">
+                <button id="clearSearch">×</button>
+            </div>
+        </div>
+
+        <h1 id="categoryTitle" class="category-title">Category</h1>
+        
+        <div id="tileContainer" class="tile-container">
+            <!-- Tiles will be dynamically generated here -->
+        </div>
+        
+        <div id="noResults" class="no-results hidden">
+            <p>No results found for your search.</p>
+        </div>
+    </div>
+</body>
+</html>
