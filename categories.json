@@ -18,7 +18,7 @@
         { "id": "icloud-backup", "title": "iCloud Backups", "icon": "icloud.svg" }
     ],
     "android": [
-        { "id": "android-performance", "title": "Battery", "icon": "performance.svg" }
+        { "id": "and-battery", "title": "Battery", "icon": "battery.svg" }
     ],
     "about": [
         { "id": "about-us", "title": "About This Project", "icon": "info.svg" },
