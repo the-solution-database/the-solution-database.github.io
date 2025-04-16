@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function loadCategoryData(category) {
     const response = await fetch('../categories.json');
-    const sampleData = await response.json();
+    const infoData = await response.json();
     // Get data for current category or use empty array if not found
     const items = infoData[category] || [];
     
