@@ -22,31 +22,55 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function loadCategoryData(category) {
-    const response = await fetch('../categories.json');
-    const infoData = await response.json();
-    // Get data for current category or use empty array if not found
-    const items = infoData[category] || [];
-    
-    // Generate tiles
-    const tileContainer = document.getElementById('tileContainer');
-    tileContainer.innerHTML = '';
-    
-    items.forEach((item, index) => {
-        const tile = document.createElement('a');
-        tile.href = `viewer.html?category=${category}&id=${item.id}`;
-        tile.className = 'tile';
-        tile.dataset.title = item.title.toLowerCase();
-        tile.style.animationDelay = `${index * 0.1}s`;
-        
-        tile.innerHTML = `
-            <div class="tile-content">
-                <img src="images/${category}/${item.icon}" alt="${item.title}">
-                <span>${item.title}</span>
-            </div>
-        `;
-        
-        tileContainer.appendChild(tile);
-    });
+    fetch('categories.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Failed to load categories data: ${response.status} ${response.statusText}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log("Categories data loaded successfully:", data);
+            
+            // Get data for current category or use empty array if not found
+            const items = data[category] || [];
+            console.log(`Items for category '${category}':`, items);
+            
+            // Generate tiles
+            const tileContainer = document.getElementById('tileContainer');
+            if (!tileContainer) {
+                console.error("Element with ID 'tileContainer' not found in the document");
+                return;
+            }
+            tileContainer.innerHTML = '';
+            
+            items.forEach((item, index) => {
+                const tile = document.createElement('a');
+                tile.href = `viewer.html?category=${category}&id=${item.id}`;
+                tile.className = 'tile';
+                tile.dataset.title = item.title.toLowerCase();
+                tile.style.animationDelay = `${index * 0.1}s`;
+                
+                tile.innerHTML = `
+                    <div class="tile-content">
+                        <img src="images/${category}/${item.icon}" alt="${item.title}">
+                        <span>${item.title}</span>
+                    </div>
+                `;
+                
+                tileContainer.appendChild(tile);
+            });
+        })
+        .catch(error => {
+            console.error('Error loading category data:', error);
+            // Error logging
+            const tileContainer = document.getElementById('tileContainer');
+            if (tileContainer) {
+                tileContainer.innerHTML = `<div class="error-message">Failed to load content: ${error.message}</div>`;
+            } else {
+                console.error("Could not display error message - tileContainer not found");
+            }
+        });
 }
 
 function filterTiles() {
