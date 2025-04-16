@@ -21,34 +21,32 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-async function loadCategoryData(category) {
-    try {
-        const response = await fetch('categories.json');
-        const sampleData = await response.json();
-
-        const items = sampleData[category] || [];
-        const tileContainer = document.getElementById('tileContainer');
-        tileContainer.innerHTML = '';
-
-        items.forEach((item, index) => {
-            const tile = document.createElement('a');
-            tile.href = `viewer.html?category=${category}&id=${item.id}`;
-            tile.className = 'tile';
-            tile.dataset.title = item.title.toLowerCase();
-            tile.style.animationDelay = `${index * 0.1}s`;
-
-            tile.innerHTML = `
-                <div class="tile-content">
-                    <img src="images/${category}/${item.icon}" alt="${item.title}">
-                    <span>${item.title}</span>
-                </div>
-            `;
-
-            tileContainer.appendChild(tile);
-        });
-    } catch (error) {
-        console.error('Failed to load category data:', error);
-    }
+function loadCategoryData(category) {
+    const response = await fetch('../categories.json');
+    const sampleData = await response.json();
+    // Get data for current category or use empty array if not found
+    const items = infoData[category] || [];
+    
+    // Generate tiles
+    const tileContainer = document.getElementById('tileContainer');
+    tileContainer.innerHTML = '';
+    
+    items.forEach((item, index) => {
+        const tile = document.createElement('a');
+        tile.href = `viewer.html?category=${category}&id=${item.id}`;
+        tile.className = 'tile';
+        tile.dataset.title = item.title.toLowerCase();
+        tile.style.animationDelay = `${index * 0.1}s`;
+        
+        tile.innerHTML = `
+            <div class="tile-content">
+                <img src="images/${category}/${item.icon}" alt="${item.title}">
+                <span>${item.title}</span>
+            </div>
+        `;
+        
+        tileContainer.appendChild(tile);
+    });
 }
 
 function filterTiles() {
