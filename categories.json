@@ -4,7 +4,7 @@
         { "id": "password-security", "title": "Password Security", "icon": "password.svg" }
     ],
     "windows": [
-        { "id": "windows-update", "title": "WiFi", "icon": "wifi.svg" }
+        { "id": "windows-update", "title": "Windows Updates", "icon": "updates.svg" }
     ],
     "linux": [
         { "id": "package-management", "title": "Packages", "icon": "package.svg" },
